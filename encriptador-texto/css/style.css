@@ -122,7 +122,9 @@ footer{
     color: #fff;
 }
 
-@media max-width(400px){
-    flex-basis: 100px;
+@media (max-width: 400px){
+    form .camp-text{
+      flex-basis: 100px;
+    }
 }
     
