@@ -121,3 +121,8 @@ footer{
     padding: 20px 0;
     color: #fff;
 }
+
+@media max-width(400px){
+    flex-basis: 100px;
+}
+    
