@@ -33,7 +33,7 @@ form .camp-text{
     font-size: 1.3rem;
     color: var(--color-font);
     caret-color: var(--color-contrast);
-    flex-basis: 300px;
+    max-width: 300px;
     height: 250px;
     background-color: var(--color-background);
     padding: 5px;
