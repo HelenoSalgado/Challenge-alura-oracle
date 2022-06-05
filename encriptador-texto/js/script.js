@@ -6,7 +6,7 @@ const buttonOutPut = document.querySelector("#button-output");
 const buttonIconLockOpen = document.querySelector("#button-input i");
 const buttonIconLock = document.querySelector("#button-output i");
 
-
+// Botão Criptografar
 buttonInput.addEventListener("click",() =>{
     loading();
     setTimeout(() => {
@@ -14,7 +14,7 @@ buttonInput.addEventListener("click",() =>{
         animationInput();
     }, 1000);  
 })
-
+// Botão Descriptografar
 buttonOutPut.addEventListener("click",() =>{
     loading();
     setTimeout(() => {
@@ -22,7 +22,7 @@ buttonOutPut.addEventListener("click",() =>{
         AnimationOutput();
     }, 1000);  
 })
-
+// Função Loaging
 function loading(){
     let loading = document.createElement("span");
     loading.classList.add("loading"); 
@@ -31,6 +31,7 @@ function loading(){
         loading.classList.remove("loading")
     }, 1000);
 }
+// Função Encriptografar
 function encrypt(stringInput){
     let matrixCode = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
 
@@ -41,7 +42,7 @@ function encrypt(stringInput){
     }
     return textEncrypted;
 }
-
+// Função Descriptografar
 function decrypt(stringOutput){
     let matrixCode = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
 
@@ -52,7 +53,7 @@ function decrypt(stringOutput){
     }
     return textDecrypt;
 }
-
+// Funçoes para animações do cadeado
 function animationInput(){
     buttonIconLockOpen.classList.remove("fa-lock-open");
     buttonIconLock.classList.remove("fa-lock-open")
@@ -64,7 +65,7 @@ function AnimationOutput(){
     buttonIconLock.classList.add("fa-lock-open");
     buttonIconLockOpen.classList.remove("fa-lock");
 }
-
+// Função para mudar ponteiro do mouse
 function mouseFocus(e){
     var x = e.pageX - output.offsetLeft;
     var y = e.pageY - output.offsetTop;
@@ -76,7 +77,7 @@ function mouseFocus(e){
        output.style.cursor = "auto";
     }
 } 
-
+// Função executar cópia
 function copy(event){
     var x = event.pageX - output.offsetLeft;
     var y = event.pageY - output.offsetTop;
@@ -89,7 +90,7 @@ function copy(event){
        message();
     }  
 }
-
+// Função exibir mensagem de susseso de cópia
 function message(){
     let message = document.createElement("em");
     message.innerText = "Texto copiado com sucesso!";
