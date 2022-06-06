@@ -4,4 +4,4 @@
 
 ### 1. [Encriptador de texto](https://helenosalgado.github.io/challenge-alura-oracle/encriptador-texto/index.html).
 <br>
-<img src="img/Captura%20de%20tela%20de%202022-06-05%2016-01-10.png">
+<img src="img/captura-de-tela-de-2022-06.png">
