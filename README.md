@@ -1,6 +1,6 @@
 # challenge-alura-oracle
 
- Este repositório tem por finalinada publicar meus desafios e projetos  desenvolvidos durante o curso de programação web da Oracle em parceria com a Alura: ONE - ORACLE NEXT EDUCATION.
+ Este repositório tem por finalidade publicar meus desafios e projetos  desenvolvidos durante o curso de programação web da Oracle em parceria com a Alura: ONE - ORACLE NEXT EDUCATION.
 
 ### 1. [Encriptador de texto](https://helenosalgado.github.io/challenge-oracle-one/encriptador-texto/index.html).
 <br>
