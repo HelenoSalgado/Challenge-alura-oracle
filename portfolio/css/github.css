@@ -1,0 +1,47 @@
+.info-github{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: var(--cor-secundaria);
+}
+.github-container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.github-container h2{
+    margin: 0 0 60px 0;
+    color: var(--cor-font);
+}
+.github-atividade{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.github-atividade div{
+    margin: 20px;
+    max-width: 450px;
+}
+.github-atividade p{
+    font-size: 1.4rem;
+    color: var(--cor-font);
+}
+.weve-github{
+    background-color: var(--cor-primaria);
+}
+.github-container button{
+    display: block;
+    margin: 50px auto 0 auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+.fa-github{
+
+}

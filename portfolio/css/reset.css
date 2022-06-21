@@ -1,0 +1,75 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+:root{
+  --cor-primaria: #14181b;
+  --cor-secundaria: #1f262f;
+  --cor-font: #dddddd;
+  --cor-destaque: #971ac9;
+  --font-primary: 'Baloo 2', 'cursive', sans-serif;
+  --font-secundary:'Josefin Slab', sans-serif;
+  --font-action: 'Mulish', sans-serif;
+}
+/* PALETA DE CORES
+   01 - #724bb8;
+   02 - #240855;
+   03 - #8662c6;
+   04 - #341270;
+   05 - #9f81d9;
+   06 - #441887;
+   07 - #cfbcf3;
+   08 - #53269b;
+   09 - #e9dff7;
+   10 - #633bab;
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+   height: 100%;
+}
+body {
+   -webkit-font-smoothing: antialiased;
+   font-size: 16px;
+   scroll-behavior: smooth;
+   background-color: var(--cor-primaria);
+   overflow-X: hidden;
+   min-width: 320px;
+}
+h2{
+  font-family: var(--font-primary);
+  text-align: start;
+  padding-left: .5rem;
+  font-size: 2.5rem;
+  color: #414141;
+}
+h3, p{
+  font-family: var(--font-secundary);
+}
+a{
+  font-family: var(--font-action);
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+section{
+  min-width: 320px;
+  margin: 5rem auto 2rem auto;
+  padding: 10px;
+}
+img, picture, video, canvas, svg {
+   display: block;
+   /* max-width: 100%; */
+} 
+input, button, textarea, select {
+   font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+}
+#root, #__next {
+   isolation: isolate;
+}
