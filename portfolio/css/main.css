@@ -52,13 +52,13 @@ header::before{
     margin-top: 150px;
     font-size: 3.5em;
     font-family: var(--font-primary); 
-    font-weight: 300;
+    font-weight: 500;
     text-shadow: 1px 1px 2px #000000;
     line-height: 3.5rem;
     animation: MoveBanner 1s;
 }
 .banner p { 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-shadow: 1px 1px 2px #000000;
     margin: .5rem 0  1rem .5rem;
     animation: MoveBanner 1.2s;
@@ -180,6 +180,64 @@ header::before{
 .weve-header{
     background-color: var(--cor-secundaria);
 }
+/* Sobre mim */
+.sobre-mim{
+    width: 100%;
+    margin: auto; 
+    background-color: var(--cor-secundaria);
+}
+.sobre-mim-container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 50px 0;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 7px;
+    box-shadow: var(--shadow-elevation-medium);
+}
+.sobre-mim-container div:first-child{
+    position: relative;
+    padding: 10px;
+    flex: 1 1 300px;
+    height: 300px;
+    border-bottom: 0px solid #0000;
+}
+.sobre-mim-container div:last-child{
+    padding: 10px;
+    flex: 1 1 600px;
+}
+.sobre-mim-container img{
+    position: absolute;
+    width: 250px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 50%;
+    animation: mola 5s ease infinite;
+}
+/* @keyframes mola {
+    0%{
+        transform: rotateX(0);
+        margin-top: 0;
+        box-shadow: hsl(var(--shadow-elevation-medium)/10);
+    }
+    50%{
+        transform: rotateX(25deg);
+        margin-top: 50px;
+        box-shadow: var(--shadow-elevation-medium);
+    }
+    0%{
+        transform: rotateX(0);
+        margin-top: 0;
+        box-shadow: hsl(var(--shadow-elevation-medium)/10);
+    }
+} */
+.sobre-mim-container p{
+    font-size: 1.2rem;
+    color: var(--cor-font);
+}
 /* Sessão GitHub */
 .info-github{
     width: 100%;
@@ -270,7 +328,7 @@ header::before{
     position: absolute;
     width: 100%;
     min-height: 100%;
-    filter: opacity(.3) contrast(150%);
+    filter: opacity(.7) contrast(150%);
     transition: .3s ease-in;
 }
 .card-text{

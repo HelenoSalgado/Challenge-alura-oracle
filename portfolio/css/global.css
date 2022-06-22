@@ -20,7 +20,7 @@
     5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
     /* Fontes */
    --font-primary: 'Baloo 2', 'cursive', sans-serif;
-   --font-secundary:'Josefin Slab', sans-serif;
+   --font-secundary: 'Work Sans', sans-serif;;
    --font-action: 'Mulish', sans-serif;
 }
 body {
