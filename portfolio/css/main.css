@@ -58,10 +58,14 @@ header::before{
     animation: MoveBanner 1s;
 }
 .banner p { 
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-shadow: 1px 1px 2px #000000;
     margin: .5rem 0  1rem .5rem;
     animation: MoveBanner 1.2s;
+}
+.banner span{
+    background-color: #bc56e4;
+    padding: 0 3px;
 }
 .banner button{
     position: relative;
@@ -72,6 +76,7 @@ header::before{
     padding: 5px;
     border-radius: 3px;
     border: none;
+    box-shadow: 2px 2px 5px var(--cor-primaria);
 }
 @keyframes MoveBanner {
     0% {
@@ -182,73 +187,153 @@ header::before{
 }
 /* Sobre mim */
 .sobre-mim{
-    width: 100%;
-    margin: auto; 
     background-color: var(--cor-secundaria);
+    margin: 0;
+    padding: 100px 0;
+}
+@keyframes backgroundMove {
+    0%{
+       background-position: 0% 50%;
+    }
+    50%{
+       background-position: 100% 50%;
+    }
+    100%{
+       background-position: 0% 50%;
+    }
 }
 .sobre-mim-container{
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 100px auto;
-    padding: 50px 0;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid var(--cor-destaque);
+    max-width: 800px;
+    margin: auto;
+    border: 1px dashed var(--cor-destaque);
+    border-top: 1px solid var(--cor-destaque);
     border-radius: 7px;
-    box-shadow: var(--shadow-elevation-medium);
+    background-image: url(../img/slopes.webp);
 }
 .sobre-mim-container div:first-child{
     position: relative;
-    padding: 10px;
-    flex: 1 1 300px;
-    height: 300px;
-    border-bottom: 0px solid #0000;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor-destaque);
+    border-radius: 7px 7px 0 0;
+    z-index: 1;
+}
+.sobre-mim-container h3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--cor-font);
 }
 .sobre-mim-container div:last-child{
-    padding: 10px;
-    flex: 1 1 600px;
+    position: relative;
+    z-index: 1;
 }
 .sobre-mim-container img{
     position: absolute;
-    width: 250px;
-    border: 1px solid var(--cor-destaque);
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    border: 2px solid var(--cor-destaque);
     border-radius: 50%;
-    animation: mola 5s ease infinite;
+    box-shadow: var(--shadow-elevation-medium);
 }
-/* @keyframes mola {
-    0%{
-        transform: rotateX(0);
-        margin-top: 0;
-        box-shadow: hsl(var(--shadow-elevation-medium)/10);
-    }
-    50%{
-        transform: rotateX(25deg);
-        margin-top: 50px;
-        box-shadow: var(--shadow-elevation-medium);
-    }
-    0%{
-        transform: rotateX(0);
-        margin-top: 0;
-        box-shadow: hsl(var(--shadow-elevation-medium)/10);
-    }
-} */
 .sobre-mim-container p{
-    font-size: 1.2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #fff;
+    background-color: #000000b0;
+    padding: 5px;
+    border-radius: 0 0 7px 7px;
+}
+.icone-pasta{
+    display: inline;
+    vertical-align: middle;
+}
+/* Seção conhecimentos */
+.secao-conhecimentos{
+    margin: 0;
+    background-color: var(--cor-secundaria);
+}
+.secao-conhecimentos h2{
+    text-align: center;
     color: var(--cor-font);
 }
-/* Sessão GitHub */
+.container-conhecimentos{
+    max-width: 1000px;
+    margin: 100px auto; 
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container-conhecimentos div{
+    flex: 1 1 300px;
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px dashed var(--cor-font);
+    box-shadow: var(--shadow-elevation-medium);
+}
+.container-conhecimentos div i{
+    font-size: 2rem;
+    background: -webkit-linear-gradient(right, hsl(283, 100%, 45%) 60%, hsl(283, 100%, 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.container-conhecimentos div h3{
+    margin: 0;
+    font-size: 2rem;
+    background: -webkit-linear-gradient(right,hsl(283, 100%, 45%) 60%, hsl(283, 100%, 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container-conhecimentos p{
+    color: var(--cor-font);
+}
+/* Seção certificados */
+.secao-certificados{
+    position: relative;
+    width: 100%;
+}
+.container-certificados{
+    max-width: 1000px;
+    margin: auto;
+}
+.container-certificados h2{
+    color: var(--cor-font);
+}
+.certificados{
+    max-width: 600px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-y: scroll;
+}
+.certificado div{
+    flex: 1 1 600px;
+    border-radius: 7px;
+}
+.certificado img{
+   display: block;
+   border-radius: 7px;
+}
+/* Seção GitHub */
 .info-github{
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    margin: -1px auto;
     padding: 20px 0;
     background-color: var(--cor-secundaria);
 }
 .github-container{
     max-width: 1000px;
-    margin: auto;
 }
 
 .github-container h2{
@@ -265,14 +350,18 @@ header::before{
 .github-atividade div{
     margin: 20px;
     max-width: 450px;
+    border: 1px solid var(--cor-font);
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: var(--shadow-elevation-medium);
 }
 .github-atividade img{
-    box-shadow: var(--shadow-elevation-medium);
     border: 1px solid var(--cor-destaque);
     border-radius: 5px;
+    width: 100%;
 }
 .github-atividade p{
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--cor-font);
 }
 .weve-github{
@@ -287,6 +376,7 @@ header::before{
     padding: 5px;
     border: none;
     border-radius: 3px;
+    box-shadow: 2px 2px 5px var(--cor-primaria);
 }
 /* Sessão projetos */
 .projetos{
@@ -364,70 +454,6 @@ header::before{
 .weve-projetos{
     background-color: var(--cor-secundaria);
 }
-/* Sessão conhecimentos */
-.sessao-conhecimentos{
-    margin: 0;
-    background-color: var(--cor-secundaria);
-}
-.conhecimentos{
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 1rem;
-}
-.conhecimentos  h2{
-    width: 100%;
-    margin-bottom: 1rem;
-    color: var(--cor-font);
-}
-.conhecimentos div{
-    flex-basis: 250px;
-    margin: .5rem;
-}
-.conhecimentos div i{
-    display: block;
-    text-align: center;
-    margin: .5rem auto;
-    font-size: 2.5rem;
-    color: var(--cor-destaque);
-}
-.conhecimentos h3{
-    margin: 0;
-    font-size: 2rem;
-    background: -webkit-linear-gradient(right, #bc56e4 60%, #730c88);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.conhecimentos p{
-    font-size: 1.2rem;
-    text-align: justify;
-    margin-top: 1rem;
-    color: var(--cor-font);
-}
-.conhecimento-img{
-    position: relative;
-}
-.conhecimento-img figure{
-    display: block;
-    margin: 1rem auto;
-    max-width: 600px;
-}
-.conhecimento-img figcaption{
-    display: none;
-    color: rgb(37, 36, 36);
-    text-align: center;
-    font-family: var(--font-secundary);
-    font-size: .7rem;
-    font-style: italic;
-}
-.conhecimento-img img{
-    width: 100%;
-    object-fit: cover;
-    /* filter: drop-shadow(1px 1px 0px #2c3e5080) saturate(150%);  */
-}
-/* Rodapé */
 footer{
     position: relative;
     padding: 2rem 0;
