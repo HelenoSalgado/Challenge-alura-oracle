@@ -1,8 +1,7 @@
 var hamburguer = document.querySelector('.menu-hamburguer'); 
 var botoes = document.querySelectorAll('button');
-var icone = document.querySelectorAll('button i');
+var icone = document.querySelectorAll('.inclina');
 var zoomImg = document.querySelectorAll('.card-capa');
-var previaImg = document.querySelectorAll('.previa-img img');
 var textFocus = document.querySelectorAll('.card-text');
 var desenho = document.querySelector('body');
 
@@ -33,63 +32,19 @@ function sinalMouse(event){
   }, 500); 
 }
 
+zoomImg.forEach( (img) => {
+  img.addEventListener('mouseover', (event) =>{
+      img.classList.add("zoom");
+      setTimeout(() => {
+        event.target.parentNode.classList.add('visible');
+      }, 200); 
+  })
+  img.addEventListener('mouseout', (event) =>{
+    img.classList.remove("zoom");
+    event.target.parentNode.classList.remove('visible');
+  })  
 
-
-
-
-
-// function sinalMouseOn(){
-  
-//     desenho.addEventListener('mousemove', (event) => {
-//     var x = event.clientX;
-//     var y = event.clientY;
-
-//     console.log(x + ", " + y);
-
-//     var cursor = document.createElement('span');
-//     cursor.classList.add('cursor');
-//     cursor.style.top = y + (15) + 'px';
-//     cursor.style.left = x + (15) + 'px';
-//     desenho.appendChild(cursor);
- 
-//     setTimeout(() => {
-//          cursor.remove();
-//     }, 500); 
-//   })
-// }
-// function sinalMouseOff(){
-//   desenho.addEventListener('mousemove', (event) => {
-//     var x = event.clientX;
-//     var y = event.clientY;
-
-//     console.log(x + ", " + y);
-
-//     var cursor = document.createElement('span');
-//     cursor.classList.remove('cursor');
-//     cursor.style.top = y + (15) + 'px';
-//     cursor.style.left = x + (15) + 'px';
-//     desenho.appendChild(cursor);
- 
-//     setTimeout(() => {
-//          cursor.remove();
-//     }, 500); 
-//   })
-// }
-
-
-// zoomImg.forEach( (img) => {
-//   img.addEventListener('mouseover', (event) =>{
-//       img.classList.add("zoom");
-//       setTimeout(() => {
-//         event.target.parentNode.classList.add('visible');
-//       }, 200); 
-//   })
-//   img.addEventListener('mouseout', (event) =>{
-//     img.classList.remove("zoom");
-//     event.target.parentNode.classList.remove('visible');
-//   })  
-
-// })
+})
 
 botoes.forEach( (button) => { 
   button.addEventListener('mouseover', () =>{
@@ -103,17 +58,30 @@ botoes.forEach( (button) => {
   })
 })
 
-img.forEach( (previa) => { 
-  img.addEventListener('mouseover', () =>{
-       previa.forEach((previa) => {
-       previa.style.opacity = "10";
-      
-       img.addEventListener('mouseout', () =>{
-       previa.style.opacity = "10";
-      })  
-    });    
-  })
-})
+// Slide de certificados
+var slideIndex = 1;
+slideDivs(slideIndex);
+
+function showDivs(n) {
+  slideDivs(slideIndex += n);
+}
+
+function slideDivs(n){
+  var i;
+  var x = document.querySelectorAll(".slide-certificado");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";
+  x[slideIndex-1].style.opacity = "0";
+  x[slideIndex-1].style.transition = ".3s ease-in";
+
+   setTimeout(() => {
+       x[slideIndex-1].style.opacity ="10";
+   }, 100); 
+}
 
 
  

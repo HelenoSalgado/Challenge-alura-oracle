@@ -45,7 +45,7 @@
       <div class="banner">
         <h1>Olá, sou Heleno Salgado Lopes</h1>
         <p>Sou estudante e aspirante à <span>programador Front-end</span> Júnior, já sei fazer algumas coisinhas &#x1F60A;. Tenho 25 anos, brasileiro, formado em técnico em agropecuária, estudante de Teologia e apaixonado por programação, sou aluno no <em>One - Oracle Next Education</em>, um programa da Oracle em parceria com a Alura Cursos.</p>
-        <button><a href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin"></i></a></button>
+        <button><a href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin inclina"></i></a></button>
       </div> 
       <div class="img-wrapper" data-aos="fade">
         <picture>
@@ -117,28 +117,39 @@
       </div>
     </div>
   </section>
+    <svg class="weve-conhecimentos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+      <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
   <section class="secao-certificados">
     <div class="container-certificados">
       <h2>Certificados</h2>
       <div class="certificados">
          <div class="certificado">
-           <img src="img/certificado-javascript01-600px.webp" alt="">
+           <img class="slide-certificado" src="img/certificado-javascript01-700.webp" alt="">
          </div>
          <div class="certificado">
-          <img src="img/certificado-javascript02-600px.webp" alt="">
+          <img class="slide-certificado" src="img/certificado-javascript02-700.webp" alt="">
          </div>
          <div class="certificado">
-          <img src="img/certificado-javascript02-600px.webp" alt="">
+          <img class="slide-certificado" src="img/certificado-javascript03-700.webp" alt="">
          </div>
          <div class="certificado">
-          <img src="img/certificado-git-e-github-600px.webp" alt="">
+          <img class="slide-certificado" src="img/certificado-git-e-github-700.webp" alt="">
          </div>
          <div class="certificado">
-          <img src="img/certificado-ie-600px.png" alt="">
+          <img class="slide-certificado" src="img/certificado-ie-700.webp" alt="">
          </div>
+         <div class="slide-button">
+         <button onclick="showDivs(1)"><img src="img/seta-a-esquerda.png" alt=""></button>
+         <button onclick="showDivs(-1)"><img src="img/seta-para-a-direita.png" alt=""></button>
+        </div>
       </div>
     </div>
+    <!-- <div> Ícones feitos por <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com'</a></div> -->
   </section>
+  <svg class="weve-certificados" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+    <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+  </svg>
   <section class="info-github">
     <div class="github-container">
       <h2>Atividades do GitHub <img class="icone-pasta" src="img/icone-pasta.png" alt="Icone de pasta"> </h2>
@@ -157,7 +168,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iusto explicabo fugiat debitis tenetur expedita soluta est rerum suscipit, quos rem necessitatibus dignissimos illo consequatur doloremque aliquid nisi dolore autem?</p>
           </div>
         </div>
-        <button><a href="https://github.com/HelenoSalgado/">GitHub<i class="fab fa-github"></i></a></button>
+        <button><a href="https://github.com/HelenoSalgado/">GitHub<i class="fab fa-github inclina"></i></a></button>
       </div>
     </section>
     <svg class="weve-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
@@ -172,46 +183,55 @@
               <h3>Leide Marketing</h3>
               <h4>HTML, CSS, JS</h4>
               <p>Página individual, semelhante ao Linktr.ee, para vender cursos e capturar leads.</p>
-              <a href="https://leidemarketing.com" target="_blank">leidemarketing.com<i class="fas fa-link"></i></a>
+              <button>
+                <a href="https://leidemarketing.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            <div class="previa-img"><img src="img/leidemara.jpeg" alt=""></div>
           </div>
-          
           <div class="card"><img class="card-capa" src="img/mario-ferreira.jpg" alt="">
             <div class="card-text">
               <h3>Acervo Mário Ferreira</h3>
               <h4>HTML e CSS</h4>
               <p>Acervo virtual com a finalidade de reunir as obras do filósofo brasileiro, Mário Ferreira dos Santos.</p>
-              <a href="https://acervomarioferreira.com.br" target="_blank">acervomarioferreira.com.br<i class="fas fa-link"></i></a>
+              <button>
+                <a href="https://acervomarioferreira.com.br" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            <div class="previa-img"><img src="img/leidemara.jpeg" alt=""></div>
           </div>
           <div class="card"><img class="card-capa" src="img/captura-de-tela-de-2022-06.png" alt="">
             <div class="card-text">
-              <h3>Mário </h3>
+              <h3>Orar e Labutar</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Site de carater religioso com varias paginas e posts por categorias, menu animado e aplicações diversas.</p>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            <div class="previa-img"><img src="img/leidemara.jpeg" alt=""></div>
           </div>
           <div class="card"><img class="card-capa" src="img/captura-botao-de-curtir.png" alt="">
             <div class="card-text">
               <h3>Botão de Curtir</h3>
             </div>
-            <div class="previa-img"><img src="img/leidemara.jpeg" alt=""></div>
           </div>
           <div class="card"><img class="card-capa" src="img/captura-de-tela-de-2022-06.png" alt="">
             <div class="card-text">
-              <h3>Encriptador</h3>
+              <h3>Orar e Labutar</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Site de carater religioso com varias paginas e posts por categorias, menu animado e aplicações diversas.</p>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            <div class="previa-img"><img src="img/leidemara.jpeg" alt=""></div>
           </div>
           <div class="card"><img class="card-capa" src="img/orar-e-labutar.jpg" alt="">
             <div class="card-text">
               <h3>Orar e Labutar</h3>
               <h4>HTML, CSS, JS</h4>
               <p>Site de carater religioso com varias paginas e posts por categorias, menu animado e aplicações diversas.</p>
-              <a href="https://orarelabutar.com" target="_blank">orarelabutar.com<i class="fas fa-link"></i></a>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
             </div>
-            <div class="previa-img"><img src="img/leidemara.jpeg" alt=""></div>
           </div>
           <div>
           </div>
@@ -221,6 +241,11 @@
         <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
         </path>
       </svg>
+      <section class="hobbies">
+         <div class="container-hobbies">
+
+         </div>
+      </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1e252e" fill-opacity="1" d="M0,320L120,282.7C240,245,480,171,720,170.7C960,171,1200,245,1320,282.7L1440,320L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
       <footer>
         <!-- 
