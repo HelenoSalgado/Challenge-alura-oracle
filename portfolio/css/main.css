@@ -37,6 +37,7 @@ header::before{
 }
 .banner{
     position: relative;
+    margin-top: 100px;
     font-family: var(--font-primary);
     max-width: 500px;
     background: transparent;
@@ -50,7 +51,6 @@ header::before{
 }
 .banner h1 {
     width: 100%;
-    margin-top: 150px;
     font-size: 3.5em;
     font-weight: 500;
     text-shadow: 1px 1px 2px #000000;
@@ -90,7 +90,7 @@ header::before{
 }
 .img-wrapper {
     position: absolute;
-    top: 50px;
+    top: -50px;
     right: 80px;
 }
 .img-wrapper img {
@@ -378,7 +378,7 @@ header::before{
     margin: auto;
 }
 .github-container h2{
-    margin-bottom: 0;
+    margin-bottom: 50px;
     text-align: center;
     color: var(--cor-font);
 }
@@ -390,7 +390,7 @@ header::before{
     align-items: center;
 }
 .github-atividade div{
-    margin: 20px;
+    margin: 20px 15px;
     max-width: 450px;
     border: 1px solid var(--cor-font);
     border-radius: 7px;
@@ -689,4 +689,12 @@ footer textarea{
 }
 .fa-arrow-up{
     text-shadow: .1px .1px 1px #fff;
+}
+/* @media (max-width: 650px) {
+    .banner{
+        margin-top: 0;
+    }
+} */
+@media (orientation: landscape){ 
+   
 }
