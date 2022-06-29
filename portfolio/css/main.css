@@ -263,14 +263,13 @@ header::before{
     margin: 50px auto; 
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
 }
 .container-conhecimentos div{
     flex: 1 1 300px;
     background-color: var(--cor-primaria);
+    margin: 15px;
     padding: 10px;
     border-radius: 7px;
-    /* border: 1px dashed var(--cor-font); */
     box-shadow: var(--shadow-elevation-medium);
 }
 .container-conhecimentos div i{
@@ -428,12 +427,6 @@ header::before{
 .projetos{
     position: relative;
 }
-/* .projetos > img{
-    position: absolute;
-    top: -100px;
-    width: 300px;
-    filter: drop-shadow(1px 1px 3px #fff);
-} */
 .container-projetos{
     max-width: 1200px;
     margin: auto;
