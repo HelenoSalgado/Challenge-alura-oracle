@@ -39,7 +39,6 @@ h2, h3{
   font-family: var(--font-primary);
   text-align: start;
   font-size: 2.5rem;
-  color: #414141;
 }
 p{
   font-family: var(--font-secundary);
