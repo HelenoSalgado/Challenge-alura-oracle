@@ -508,6 +508,93 @@ footer{
     width: 100%;
     background-color: var(--cor-secundaria); 
     color: var(--cor-font);
+    overflow: hidden;
+}
+footer .luzes{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -1px 1px 5px #fff;
+    animation: piscar 2s ease-in infinite;
+}
+.luzes:nth-child(1){
+    top: 30%;
+    left: 70%;
+}
+.luzes:nth-child(2){
+    top: 10%;
+    left: 90%;
+    animation-delay: 700ms;
+}
+.luzes:nth-child(3){
+    top: 15%;
+    left: 85%;
+    animation-delay: 2s;
+}
+.luzes:nth-child(4){
+    top: 40%;
+    left: 1%;
+    animation-delay: 500ms;
+}
+.luzes:nth-child(5){
+    top: 20%;
+    left: 15%;
+    animation-delay: 1s;
+}
+.luzes:nth-child(6){
+    top: 35%;
+    left: 55%;
+    animation-delay: 2s;
+}
+.luzes:nth-child(7){
+    top: 25%;
+    left: 60%;
+    animation-delay: 3s;
+}
+.luzes:nth-child(8){
+    top: 100%;
+    left: 80%;
+    animation-delay: 100ms;
+}
+.luzes:nth-child(9){
+    top: 90%;
+    left: 50%;
+    animation-delay: 800ms;
+}
+.luzes:nth-child(10){
+    top: 2%;
+    left: 30%;
+    animation-delay: 200ms;
+}
+.luzes:nth-child(11){
+    top: 0;
+    left: 20%;
+    animation-delay: 1.5s;
+}
+.luzes:nth-child(12){
+    top: 70%;
+    left: 40%;
+    animation-delay: 600ms;
+}
+.luzes:nth-child(13){
+    top: 80%;
+    left: 10%;
+    animation-delay: 900ms;
+}
+.luzes:nth-child(14){
+    top: 75%;
+    left: 90%;
+    animation-delay: 300ms;
+}
+@keyframes piscar {
+    from{
+        transform: scale(0.0);
+    }
+    to{
+        transform: scale(1.1);
+    }
 }
 footer .contato{
     display: flex;
@@ -516,31 +603,51 @@ footer .contato{
     flex-wrap: wrap;
     height: 100%;
 }
-.contato div{ 
-    background-image: url(../img/heleno.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
-    opacity: .5;
-    filter: contrast(150%);
-    border: 1px solid var(--cor-destaque);
-    border-radius: 25px;
-    overflow: hidden;
-    flex: 0 1 50%;
+.contato div{
+    position: relative;
+    margin-top: 50px;
+    width: 400px;
     height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
 }
-/* .contato div::before{
+.contato div img{ 
+    position: relative;
+    display: block;
+    margin: .5%;
+    width: 99%;
+    height: 99%;
+    filter: contrast(130%);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 50%;
+    z-index: 1;
+}
+.contato div::after{
      content: "";
-     width: 40%;
+     width: 100%;
+     height: 100%;
      position: absolute;
-     background-color: hsla(0, 0%, 0%, 0.612);
-     border-radius: 15px;
-} */
+     top: 0;
+     background-image: linear-gradient(var(--cor-destaque), #fff);
+     border-radius: 50%;
+     animation: rodar 2s linear infinite;
+     z-index: 0;
+} 
+@keyframes rodar {
+    0%{
+        transform: rotateZ(0);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
 footer form{
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex: 0 1 300px;
+    width: 100%;
+    margin: 15px;
     font-family: var(--font-primary);
     font-size: 1.3rem;
     max-width: 500px;
@@ -584,6 +691,7 @@ footer textarea{
 .copy a{
     border-left: 3px solid var(--cor-destaque);
     padding-left: 7px;
+    text-shadow: .5px .5px 0 #fff;
 }
 /* Botao 3D */
 .pushable {
