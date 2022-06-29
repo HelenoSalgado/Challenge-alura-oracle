@@ -473,7 +473,7 @@ header::before{
     border-radius: 10px;
 }
 .card-text h3{
-    margin-top: 10px;
+    text-align: center;
     color: var(--cor-font);
     font-size: 1.7rem;
 }
