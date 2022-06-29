@@ -37,6 +37,7 @@ header::before{
 }
 .banner{
     position: relative;
+    font-family: var(--font-primary);
     max-width: 500px;
     background: transparent;
     backdrop-filter: blur(5px);
@@ -51,7 +52,6 @@ header::before{
     width: 100%;
     margin-top: 150px;
     font-size: 3.5em;
-    font-family: var(--font-primary); 
     font-weight: 500;
     text-shadow: 1px 1px 2px #000000;
     line-height: 3.5rem;
@@ -152,7 +152,6 @@ header::before{
     right: -100%;
     transition: all 1s;
     z-index: 2;
-    
 }
 .show-menu .sidebar{
     right: 0;
@@ -167,14 +166,17 @@ header::before{
     list-style: none;
     text-align: center;
     margin-bottom: 1rem;
+    font-weight: bold;
     font-size: 1.2rem;
-    transition: 10ms ease-in;
+    text-shadow: .5px .5px 0 #fff;
+    transition: 5ms ease-in;
 }
 .social-media {
     position: absolute;
     display: flex;
     width: 100%;
     font-size: 1.5rem;
+    text-shadow: .5px .5px 0 #fff;
     bottom: 2rem;
     justify-content: space-evenly;
 }
@@ -206,24 +208,21 @@ header::before{
     position: relative;
     max-width: 800px;
     margin: auto;
-    border: 1px dashed var(--cor-destaque);
-    border-top: 1px solid var(--cor-destaque);
+    /* border: 1px solid var(--cor-destaque); */
     border-radius: 7px;
-    background-image: url(../img/slopes.webp);
+    box-shadow: var(--shadow-elevation-medium);
 }
 .sobre-mim-container div:first-child{
     position: relative;
     width: 100%;
-    height: 40px;
+    height: auto;
     background-color: var(--cor-destaque);
     border-radius: 7px 7px 0 0;
     z-index: 1;
 }
 .sobre-mim-container h3{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
     color: var(--cor-font);
 }
 .sobre-mim-container div:last-child{
@@ -231,6 +230,7 @@ header::before{
     z-index: 1;
 }
 .sobre-mim-container img{
+    display: none;
     position: absolute;
     top: -140px;
     left: 50%;
@@ -245,15 +245,9 @@ header::before{
     font-size: 1.1rem;
     line-height: 1.5rem;
     color: #fff;
-    background-color: #000000b0;
-    padding: 5px;
+    /* background-color: #000000b0; */
+    padding: 10px;
     border-radius: 0 0 7px 7px;
-}
-.icone-pasta{
-    display: inline;
-    vertical-align: middle;
-    opacity: .8;
-    filter: drop-shadow(1px 1px 3px var(--cor-destaque));
 }
 /* Seção conhecimentos */
 .secao-conhecimentos{
@@ -276,7 +270,7 @@ header::before{
     background-color: var(--cor-primaria);
     padding: 10px;
     border-radius: 7px;
-    border: 1px dashed var(--cor-font);
+    /* border: 1px dashed var(--cor-font); */
     box-shadow: var(--shadow-elevation-medium);
 }
 .container-conhecimentos div i{
@@ -306,7 +300,6 @@ header::before{
 }
 .container-certificados{
     max-width: 1000px;
-    height: 100vh;
     margin: auto;
 }
 .container-certificados h2{
@@ -405,8 +398,11 @@ header::before{
     padding: 10px;
     box-shadow: var(--shadow-elevation-medium);
 }
+.github-atividade div:nth-child(2),
+.github-atividade div:nth-child(3){
+    background-color: var(--cor-destaque);
+}
 .github-atividade img{
-    border: 1px solid var(--cor-destaque);
     border-radius: 5px;
     width: 100%;
 }
@@ -458,7 +454,7 @@ header::before{
     height: 250px;
     margin: 15px;
     background-color: hsl(231, 15%, 18%);
-    border: .5px dashed var(--cor-destaque);
+    border: .5px solid var(--cor-destaque);
     box-shadow: var(--shadow-elevation-medium);
     border-radius: 10px;
     overflow: hidden;
@@ -468,8 +464,9 @@ header::before{
     position: absolute;
     width: 100%;
     min-height: 100%;
-    filter: opacity(.7) contrast(150%);
-    transition: .3s ease-in;
+    filter: contrast(70%);
+    transition: 250ms ease-in;
+    z-index: 1;
 }
 .card-text{
     position: absolute;
@@ -481,8 +478,6 @@ header::before{
     background: -webkit-linear-gradient(to right, hsl(204, 31%, 13%), hsl(231, 15%, 18%));
     background: linear-gradient(to right, hsl(204, 31%, 13%), hsl(231, 15%, 18%));  
     border-radius: 10px;
-    transition: .5s ease;
-    z-index: -1;
 }
 .card-text h3{
     margin-top: 10px;
@@ -507,41 +502,183 @@ header::before{
     padding: 3px;
     border: 2px solid var(--cor-destaque);
     border-radius: 5px; 
+    z-index: 100;
+    cursor: pointer;
 }
 .weve-projetos{
     background-color: var(--cor-secundaria);
 }
 footer{
+    margin-top: -5px;
     position: relative;
-    padding: 2rem 0;
+    padding-bottom: 10px;
     width: 100%;
+    background-color: var(--cor-secundaria); 
     color: var(--cor-font);
 }
-footer img{
-    position: absolute;
-    width: 100%;
+footer .contato{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.contato div{ 
+    background-image: url(../img/heleno.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    opacity: .5;
+    filter: contrast(150%);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 25px;
+    overflow: hidden;
+    flex: 0 1 50%;
+    height: 400px;
+}
+/* .contato div::before{
+     content: "";
+     width: 40%;
+     position: absolute;
+     background-color: hsla(0, 0%, 0%, 0.612);
+     border-radius: 15px;
+} */
+footer form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 1 300px;
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    max-width: 500px;
+    padding: 5px;
+}
+footer input{
+    height: 50px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--cor-destaque);
+    background-color: transparent;
+    padding: 0;
+    color: #fff;
+    caret-color: var(--cor-destaque);
+}
+footer input::placeholder, 
+textarea::placeholder{
+    color: var(--cor-font);
+}
+footer textarea{
+    background: #14171a2f;
+    background: -webkit-linear-gradient(to right, #971ac954, #971ac90a);
+    background: linear-gradient(to right, #971ac954, #971ac90a); 
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    caret-color: var(--cor-destaque);
+    padding: 5px;
 }
 .copy{
+    margin-top: 100px;
+    width: 100%;
     text-align: center;
     font-family: var(--font-secundary);
 }
-footer p{
-    font-size: 1.3rem;
+.copy p{
+    font-size: 1rem;
 }
-footer a{
-    margin: 0 1rem;
-    font-size: 1.3rem;
-    color: var(--cor-destaque);
+.copy a{
+    border-left: 3px solid var(--cor-destaque);
+    padding-left: 7px;
 }
-footer a i{
-   margin-top: 1rem;
-}
-footer q{
+/* Botao 3D */
+.pushable {
+    position: relative;
+    margin-top: .7rem;
+    width: 9rem;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+  }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      hsl(283, 77%, 45%) 0%,
+      hsl(283, 89%, 28%) 8%,
+      hsl(283, 89%, 28%) 92%,
+      hsl(283, 77%, 45%) 100%
+    );
+  }
+  .front {
     display: block;
-    font-family: var(--font-secundary);
-    text-align: center;
-    font-style: oblique;
-}
+    position: relative;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-family: var(--font-action);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    background: hsl(283, 77%, 45%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  .pushable:hover {
+    filter: brightness(110%);
+  }
+  .pushable:hover .front {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  .pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  .pushable:hover .shadow {
+    transform: translateY(4px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  .pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
 .link-topo{
     position: fixed;
     right: 10px;

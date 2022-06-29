@@ -14,13 +14,14 @@
   <meta property="og:url" content="https://heleno.dev/" />
   <meta property="og:image" content="https://heleno.dev/img-icon/android-chrome-512x512.png" />
   <!-- Fontes do google fontes. -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <!-- Biblioteca de ícones. -->
+  <!-- Biblioteca de ícones.-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Biblioteca de animacões conforme scroll. -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
   <!-- CSS local. -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/global.css">
@@ -47,7 +48,7 @@
         <p>Sou estudante e aspirante à <span>programador Front-end</span> Júnior, já sei fazer algumas coisinhas &#x1F60A;. Tenho 25 anos, brasileiro, formado em técnico em agropecuária, estudante de Teologia e apaixonado por programação, sou aluno no <em>One - Oracle Next Education</em>, um programa da Oracle em parceria com a Alura Cursos.</p>
         <button><a href="https://www.linkedin.com/in/helenosalgado">Linked<i class="fab fa-linkedin inclina"></i></a></button>
       </div> 
-      <div class="img-wrapper" data-aos="fade">
+      <div class="img-wrapper">
         <picture>
           <source media="(max-width: 750px)" srcset="">
           <source media="(min-width: 800px)" srcset="">
@@ -58,11 +59,12 @@
     <aside class="sidebar">
       <nav>
         <ul class="menu">
-          <li class="menu-item"><a href="#home" class="menu-link"><s>HOME</s></a></li>
+          <li class="menu-item"><a href="#sobre" class="menu-link">SOBRE MIM</a></li>
           <li class="menu-item"><a href="#conhecimentos" class="menu-link">CONHECIMENTOS</a></li>
           <li class="menu-item"><a href="#projetos" class="menu-link">PROJETOS</a></li>
-          <li class="menu-item"><a href="#contato" class="menu-link">CONTATO</a></li>
-          <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">ORÇAMENTO</a></li>
+          <li class="menu-item"><a href="#github" class="menu-link">GITHUB</a></li>
+          <li class="menu-item"><a href="#hobbies" class="menu-link">HOBBIES</a></li>
+          <!-- <li class="menu-item"><a href="/orcamento/index.html" class="menu-link">ORÇAMENTO</a></li> -->
           <li class="menu-item"><a href="/blog/index.html" class="menu-link">BLOG</a></li>
         </ul>
       </nav>
@@ -76,7 +78,7 @@
   <svg class="weve-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
     <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
-  <section class="sobre-mim">
+  <section class="sobre-mim" id="sobre">
     <div class="sobre-mim-container">
       <div>
         <h3><span>Experiência</span> <span>Profissional</span></h3>
@@ -87,8 +89,8 @@
         </div>
       </div>
     </section>
-    <section class="secao-conhecimentos"> 
-      <h2>Tecnologias <img class="icone-pasta" src="img/icone-pasta.png" alt="Icone de pasta"></h2>
+    <section class="secao-conhecimentos" id="conhecimentos"> 
+      <h2>Tecnologias</h2>
       <div class="container-conhecimentos"> 
           <div>
             <i class="fab fa-html5"></i>
@@ -111,16 +113,21 @@
             <p>O JavaScript cuida das interações com o usuário e <strong>programa o comportamento das páginas da web.</strong></p>
         </div>
         <div>
+          <i class="fa-brands fa-git-alt"></i>
+          <h3>Git</h3>
+          <p>O sistema de controle de versão distribuído, o git, permite a manutenção do código e o <strong>trabalho em equipe.</strong></p>
+        </div>
+        <div>
             <i class="fa-brands fa-wordpress"></i>
             <h3>Wordpress</h3>
-            <p>Você também pode querer usar o Wordpress para criar seu site de conteúdo ou <strong>Loja Virtual com o Woocommerce.</strong> Se este for o caso, também posso ajudá-lo.</p>
+            <p>O wordpress facilita a criação de sites de conteúdo dinâmicos ou <strong>loja virtual com o Woocommerce</strong>.</p>
       </div>
     </div>
   </section>
     <svg class="weve-conhecimentos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
       <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
     </svg>
-  <section class="secao-certificados">
+  <section class="secao-certificados" id="certificados">
     <div class="container-certificados">
       <h2>Certificados</h2>
       <div class="certificados">
@@ -150,9 +157,9 @@
   <svg class="weve-certificados" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
     <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
-  <section class="info-github">
+  <section class="info-github" id="github">
     <div class="github-container">
-      <h2>Atividades do GitHub <img class="icone-pasta" src="img/icone-pasta.png" alt="Icone de pasta"> </h2>
+      <h2>Atividades do GitHub</h2>
       <div class="github-atividade">
         <!-- <a href="https://github.com/HelenoSalgado"> --> 
           <div>
@@ -174,52 +181,27 @@
     <svg class="weve-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
       <path fill="#1e252e" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
     </svg>
-    <section class="projetos">
+    <section class="projetos" id="projetos">
       <div class="container-projetos">
-        <h2>Projetos e Desafios <img class="icone-pasta" src="img/icone-pasta.png" alt="Icone de pasta"></h2>
+        <h2>Projetos e Desafios</h2>
         <div class="card-projetos">
-          <div class="card"><img class="card-capa" src="img/leidemara.jpeg" alt="">
+          <div class="card"><img class="card-capa" src="img/seo-6271942_640.png" alt="">
             <div class="card-text">
               <h3>Leide Marketing</h3>
               <h4>HTML, CSS, JS</h4>
               <p>Página individual, semelhante ao Linktr.ee, para vender cursos e capturar leads.</p>
               <button>
-                <a href="https://leidemarketing.com" target="_blank"><i class="fas fa-link"></i></a>
+                <a href="https://leidemarketing.com" target="_blank" class="ver"><i class="fas fa-link"></i></a>
               </button>
             </div>
           </div>
-          <div class="card"><img class="card-capa" src="img/mario-ferreira.jpg" alt="">
+          <div class="card"><img class="card-capa" src="img/a-book-1840910_640.jpg" alt="">
             <div class="card-text">
               <h3>Acervo Mário Ferreira</h3>
               <h4>HTML e CSS</h4>
               <p>Acervo virtual com a finalidade de reunir as obras do filósofo brasileiro, Mário Ferreira dos Santos.</p>
               <button>
                 <a href="https://acervomarioferreira.com.br" target="_blank"><i class="fas fa-link"></i></a>
-              </button>
-            </div>
-          </div>
-          <div class="card"><img class="card-capa" src="img/captura-de-tela-de-2022-06.png" alt="">
-            <div class="card-text">
-              <h3>Orar e Labutar</h3>
-              <h4>HTML, CSS, JS</h4>
-              <p>Site de carater religioso com varias paginas e posts por categorias, menu animado e aplicações diversas.</p>
-              <button>
-                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
-              </button>
-            </div>
-          </div>
-          <div class="card"><img class="card-capa" src="img/captura-botao-de-curtir.png" alt="">
-            <div class="card-text">
-              <h3>Botão de Curtir</h3>
-            </div>
-          </div>
-          <div class="card"><img class="card-capa" src="img/captura-de-tela-de-2022-06.png" alt="">
-            <div class="card-text">
-              <h3>Orar e Labutar</h3>
-              <h4>HTML, CSS, JS</h4>
-              <p>Site de carater religioso com varias paginas e posts por categorias, menu animado e aplicações diversas.</p>
-              <button>
-                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
               </button>
             </div>
           </div>
@@ -233,6 +215,34 @@
               </button>
             </div>
           </div>
+          <div class="card"><img class="card-capa" src="img/like.webp" alt="">
+            <div class="card-text">
+              <h3>Botão de Curtir</h3>
+              <h4>HTML, CSS, JS, PHP, SQL</h4>
+              <p>Um desafio que fiz para desenvolver habilidades de lógica de programação e FECTH API do JavaScript.</p>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
+            </div>
+          </div>
+          <div class="card"><img style="z-index: 1;" class="card-capa" src="img/cybersecurity-6673412_640.png" alt="">
+            <div class="card-text">
+              <h3>Encriptador de Texto</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Desafio desenvolvido como parte das atividades do programa One - Oracle Next Education.</p>
+              <button>
+                <a href="https://orarelabutar.com" target="_blank"><i class="fas fa-link"></i></a>
+              </button>
+            </div>
+          </div>
+          <div class="card"><img class="card-capa" src="img/work-developer.jpg" alt="">
+            <div class="card-text">
+              <h3>E-commerce</h3>
+              <h4>HTML, CSS, JS</h4>
+              <p>Site para loja virtual em andamento, proposta de desafio do programa One - Oracle Next Education.</p>
+              <progress style="height: 30px;"></progress>
+            </div>
+          </div>
           <div>
           </div>
         </div>
@@ -241,26 +251,37 @@
         <path fill="#14171a" fill-opacity="1" d="M0,64L80,53.3C160,43,320,21,480,21.3C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
         </path>
       </svg>
-      <section class="hobbies">
+      <section class="hobbies" id="hobbies">
          <div class="container-hobbies">
 
          </div>
       </section>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1e252e" fill-opacity="1" d="M0,320L120,282.7C240,245,480,171,720,170.7C960,171,1200,245,1320,282.7L1440,320L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1e252e" fill-opacity="1" d="M0,320L120,282.7C240,245,480,171,720,170.7C960,171,1200,245,1320,282.7L1440,320L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg> -->
       <footer>
         <!-- 
           Imagem extraída do seguinte site:
           https://www.joshwcomeau.com/_next/image/?url=%2Fimages%2Fshadow-palette%2Fslopes.png&w=3840&q=75
         -->
-        <img src="img/slopes.webp" alt="Imagem de fundo do rodapé, várias ondas perto e distantes com foco luminoso mais ao centro">
+        <div class="contato">
         <form action="">
-          <label for="">
-            <input type="email">
-          </label>
+          <input type="text" placeholder="Nome Completo">
+          <input type="email" placeholder="Email">
+          <textarea name="" id="" cols="30" rows="7" placeholder="Envie-me uma mensagem."></textarea>
+          <button class="pushable">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              Enviar
+            </span>
+          </button>
         </form>
+        <div>
+          
+        </div>
+      </div>
         <div class="copy">
-          <p>&copy; 2021 Heleno Salgado Lopes.</p>
-          <q>Ao Senhor pertence a salvação - (Jonas 2:9)</q> 
+          <a href="https://heleno.dev/blog">BLOG</a>
+          <p>&copy; 2022 Heleno Salgado Lopes.</p>
         </div>
       </footer>
       
@@ -269,10 +290,10 @@
       </a>
       <script src="js/animation.js"></script>
       <!-- Bliblioteca de script de animação com scroll -->
-      <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-      <!-- <script>
+      <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
         AOS.init({
-          duration: 1000,
+          duration: 500,
           //    aos: fade-up,
           //    offset: 200,
           //    delay: 50,
@@ -280,7 +301,7 @@
           //    mirror: true,
           //    once: false,
           //    placement: top-center,
-        });
-      </script> -->
+        }); -->
+      </script>
     </body>
     </html>

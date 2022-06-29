@@ -1,9 +1,11 @@
 var hamburguer = document.querySelector('.menu-hamburguer'); 
 var botoes = document.querySelectorAll('button');
 var icone = document.querySelectorAll('.inclina');
-var zoomImg = document.querySelectorAll('.card-capa');
+var cardProjetos = document.querySelectorAll('.card');
+var img = document.querySelectorAll(".card-capa");
 var textFocus = document.querySelectorAll('.card-text');
 var desenho = document.querySelector('body');
+var enviar = document.querySelector('.pushable')
 
 hamburguer.addEventListener('click', () =>{
   var menuAtivo = document.querySelector('.container').classList.toggle('show-menu');
@@ -32,20 +34,25 @@ function sinalMouse(event){
   }, 500); 
 }
 
-zoomImg.forEach( (img) => {
-  img.addEventListener('mouseover', (event) =>{
-      img.classList.add("zoom");
-      setTimeout(() => {
-        event.target.parentNode.classList.add('visible');
-      }, 200); 
+cardProjetos.forEach( (card) => {
+  card.addEventListener('mouseenter', () =>{
+       img.forEach((img) => {
+        img.addEventListener('mouseenter', () =>{
+         img.classList.add("zoom");
+         setTimeout(() => {
+           img.style.display = "none";
+         }, 300); 
+      })
+    })
   })
-  img.addEventListener('mouseout', (event) =>{
+card.addEventListener('mouseleave', () =>{
+  img.forEach((img) => {
+    img.style.display = "block";
     img.classList.remove("zoom");
-    event.target.parentNode.classList.remove('visible');
-  })  
-
+   })
+  })
 })
-
+ 
 botoes.forEach( (button) => { 
   button.addEventListener('mouseover', () =>{
        icone.forEach((icone) => {
@@ -82,6 +89,10 @@ function slideDivs(n){
        x[slideIndex-1].style.opacity ="10";
    }, 100); 
 }
+
+enviar.addEventListener("click", (event) => {
+  event.preventDefault();
+})
 
 
  
