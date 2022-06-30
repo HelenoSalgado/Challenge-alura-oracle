@@ -447,7 +447,6 @@ header::before{
     text-align: center;
     margin-bottom: 70px;
     color: var(--cor-font);
-
 }
 .card-projetos{
     display: flex;
@@ -456,7 +455,7 @@ header::before{
 .card{
     position: relative;
     flex: 1 1 300px;
-    height: 250px;
+    min-height: 250px;
     margin: 15px;
     background-color: hsl(231, 15%, 18%);
     border: .5px solid var(--cor-destaque);
@@ -507,7 +506,6 @@ header::before{
     padding: 3px;
     border: 2px solid var(--cor-destaque);
     border-radius: 5px; 
-    z-index: 100;
     cursor: pointer;
 }
 .weve-projetos{
