@@ -72,6 +72,7 @@ header::before{
     margin-left: 10px;
     font-size: 1.3rem;
     font-weight: bold;
+    vertical-align: middle;
     background-color: #fff;
     padding: 5px;
     border: 1px solid var(--cor-destaque);
@@ -416,7 +417,7 @@ header::before{
     width: 100%;
 }
 .github-atividade p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--cor-font);
 }
 .weve-github{
@@ -521,7 +522,7 @@ header::before{
 }
 .container-hobbies{
     max-width: 1000px;
-    padding: 100px 0;
+    padding: 70px 10px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -533,7 +534,6 @@ header::before{
     flex: 1 0 200px;
     height: auto;
     background-color: var(--cor-primaria);
-    padding: 10px;
     border-radius: 7px;
     display: flex;
     flex-wrap: wrap;
@@ -723,7 +723,6 @@ footer form{
     gap: 10px;
     flex: 0 1 400px;
     width: 100%;
-    margin: 15px;
     font-family: var(--font-primary);
     font-size: 1.3rem;
     max-width: 500px;

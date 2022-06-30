@@ -16,7 +16,7 @@
     /* Fontes */
    --font-primary: 'Baloo 2', 'cursive', sans-serif;
    --font-secundary: 'Poppins', sans-serif;
-   --font-action: 'Mulish', sans-serif;
+   --font-action: Verdana, Geneva, Tahoma, sans-serif;
 }
 html{
   scroll-behavior: smooth;
