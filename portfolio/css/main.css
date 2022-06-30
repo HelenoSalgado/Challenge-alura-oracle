@@ -29,6 +29,13 @@ header::before{
     display: block;
     width: 65px;
 }
+.logo i{
+    position: absolute; 
+    top:15px; 
+    right: 75px;
+    color: var(--cor-destaque); 
+    font-size: 32px; 
+}
 .apresentacao{
     position: relative;
     max-width: 1200px;

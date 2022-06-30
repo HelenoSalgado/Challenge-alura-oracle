@@ -11,6 +11,8 @@ var somMenuOf = document.querySelector('.som-menu-of');
 var somCertificados = document.querySelector('.som-certificados');
 var somProjetos = document.querySelector('.som-projetos');
 var somEnviar = document.querySelector('.button-enviar');
+var volume = document.querySelector(".logo i");
+var iVolume = 0;
 
 
 hamburguer.addEventListener('click', () =>{
@@ -18,10 +20,14 @@ hamburguer.addEventListener('click', () =>{
   menuAtivo;
 
   if(menuAtivo){
-    somMenuOn.play();
+    if (iVolume == 0) {
+      somMenuOn.play();
+    }
     desenho.addEventListener('mousemove', sinalMouse);
   }else{
-    somMenuOf.play();
+    if (iVolume == 0) {
+      somMenuOf.play();
+    }
     desenho.removeEventListener('mousemove', sinalMouse);
   }
 
@@ -42,14 +48,26 @@ function sinalMouse(event){
   }, 500); 
 }
 
+volume.addEventListener("click", () =>{
+  
+  if (iVolume == 0) {
+    volume.classList.add("fa-volume-xmark");
+    iVolume++;
+  }else{
+    volume.classList.remove("fa-volume-xmark");
+    iVolume--;
+  }
+})
+
 cardProjetos.forEach( (card) => {
   card.addEventListener('mouseenter', () =>{
        img.forEach((img) => {
         img.addEventListener('mouseenter', () =>{
          if (window.innerWidth < 660) {
-           somProjetos.play();
+          if (iVolume == 0) {
+            somProjetos.play();
+          }
          }
-         
           img.classList.add("zoom");
           setTimeout(() => {
             img.style.display = "none";
@@ -81,7 +99,9 @@ var slideIndex = 1;
 slideDivs(slideIndex);
 
 function showDivs(n) {
-  somCertificados.play();
+  if (iVolume == 0) {
+    somCertificados.play();
+  }
   slideDivs(slideIndex += n);
 }
 
@@ -104,7 +124,9 @@ function slideDivs(n){
 
 enviar.addEventListener("click", (event) => {
   event.preventDefault();
-  somEnviar.play();
+  if (iVolume == 0) {
+    somEnviar.play();
+  }
 })
 
 
