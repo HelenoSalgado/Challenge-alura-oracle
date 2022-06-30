@@ -231,7 +231,6 @@ header::before{
     height: auto;
     background-color: var(--cor-destaque);
     border-radius: 7px 7px 0 0;
-    z-index: 1;
 }
 .sobre-mim-container h3{
     text-align: center;
@@ -240,7 +239,6 @@ header::before{
 }
 .sobre-mim-container div:last-child{
     position: relative;
-    z-index: 1;
 }
 .sobre-mim-container img{
     display: none;
@@ -438,6 +436,7 @@ header::before{
 /* Sessão projetos */
 .projetos{
     position: relative;
+    padding-bottom: 50px;
 }
 .container-projetos{
     max-width: 1200px;
@@ -871,15 +870,8 @@ footer textarea{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .fa-arrow-up{
     text-shadow: .1px .1px 1px #fff;
-}
-/* @media (max-width: 650px) {
-    .banner{
-        margin-top: 0;
-    }
-} */
-@media (orientation: landscape){ 
-   
 }
