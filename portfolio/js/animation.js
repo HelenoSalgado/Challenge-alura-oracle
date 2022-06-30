@@ -5,15 +5,20 @@ var cardProjetos = document.querySelectorAll('.card');
 var img = document.querySelectorAll(".card-capa");
 var textFocus = document.querySelectorAll('.card-text');
 var desenho = document.querySelector('body');
-var enviar = document.querySelector('.pushable')
+var enviar = document.querySelector('.pushable');
+var somMenuOn = document.querySelector('.som-menu-on');
+var somMenuOf = document.querySelector('.som-menu-of');
+var som = document.querySelector('.button-enviar');
 
 hamburguer.addEventListener('click', () =>{
   var menuAtivo = document.querySelector('.container').classList.toggle('show-menu');
   menuAtivo;
 
   if(menuAtivo){
+    somMenuOn.play();
     desenho.addEventListener('mousemove', sinalMouse);
   }else{
+    somMenuOf.play();
     desenho.removeEventListener('mousemove', sinalMouse);
   }
 
@@ -34,10 +39,13 @@ function sinalMouse(event){
   }, 500); 
 }
 
+var somProjetos = document.querySelector('.som-projetos');
+    
 cardProjetos.forEach( (card) => {
   card.addEventListener('mouseenter', () =>{
        img.forEach((img) => {
         img.addEventListener('mouseenter', () =>{
+         somProjetos.play();
          img.classList.add("zoom");
          setTimeout(() => {
            img.style.display = "none";
@@ -45,19 +53,18 @@ cardProjetos.forEach( (card) => {
       })
     })
   })
-card.addEventListener('mouseleave', () =>{
-  img.forEach((img) => {
-    img.style.display = "block";
-    img.classList.remove("zoom");
+  card.addEventListener('mouseleave', () =>{
+    img.forEach((img) => {
+      img.style.display = "block";
+        img.classList.remove("zoom");
    })
   })
 })
- 
 botoes.forEach( (button) => { 
   button.addEventListener('mouseover', () =>{
        icone.forEach((icone) => {
        icone.classList.add("inclina-icone");
-      
+   
        button.addEventListener('mouseout', () =>{
        icone.classList.remove("inclina-icone");
       })  
@@ -92,7 +99,9 @@ function slideDivs(n){
 
 enviar.addEventListener("click", (event) => {
   event.preventDefault();
+  som.play();
 })
+
 
 
  
