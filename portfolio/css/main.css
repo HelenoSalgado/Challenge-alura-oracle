@@ -38,7 +38,6 @@ header::before{
 .banner{
     position: relative;
     margin-top: 100px;
-    font-family: var(--font-primary);
     max-width: 500px;
     background: transparent;
     backdrop-filter: blur(5px);
@@ -51,6 +50,7 @@ header::before{
 }
 .banner h1 {
     width: 100%;
+    font-family: var(--font-primary);
     font-size: 3.5em;
     font-weight: 500;
     text-shadow: 1px 1px 2px #000000;
@@ -77,6 +77,19 @@ header::before{
     border: 1px solid var(--cor-destaque);
     border-radius: 3px;
     box-shadow: 2px 2px 5px var(--cor-primaria);
+}
+.banner img{
+    display: inline-block;
+    width: 50px;
+    vertical-align: middle;
+    margin-left: 20px;
+    -webkit-filter: contrast(150%);
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 100ms ease-in;
 }
 @keyframes MoveBanner {
     0% {
@@ -156,11 +169,12 @@ header::before{
 .show-menu .sidebar{
     right: 0;
 }
-.menu {
+.menu{
     position: absolute;
     top: 43%;
-    left: 48%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    padding: 0;
 }
 .menu-item, .menu-link {
     list-style: none;
@@ -208,7 +222,6 @@ header::before{
     position: relative;
     max-width: 800px;
     margin: auto;
-    /* border: 1px solid var(--cor-destaque); */
     border-radius: 7px;
     box-shadow: var(--shadow-elevation-medium);
 }
@@ -245,7 +258,6 @@ header::before{
     font-size: 1.1rem;
     line-height: 1.5rem;
     color: #fff;
-    /* background-color: #000000b0; */
     padding: 10px;
     border-radius: 0 0 7px 7px;
 }
@@ -503,7 +515,7 @@ header::before{
 }
 /* Seção Hobbies */
 .hobbies{
-    margin-top: -5px;
+    margin-top: -7px;
     background-color: var(--cor-secundaria);
 }
 .hobbies h2{

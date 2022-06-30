@@ -18,9 +18,11 @@
    --font-secundary: 'Poppins', sans-serif;
    --font-action: 'Mulish', sans-serif;
 }
-body {
+html{
   scroll-behavior: smooth;
   scrollbar-width: thin;
+}
+body {
   background-color: var(--cor-primaria);
   overflow-X: hidden;
   min-width: 320px;
@@ -37,7 +39,6 @@ body::-webkit-scrollbar-thumb {
 }
 h2, h3{
   font-family: var(--font-primary);
-  text-align: start;
   font-size: 2.5rem;
 }
 p{
@@ -47,7 +48,4 @@ a{
   font-family: var(--font-action);
   color: var(--cor-destaque);
   text-decoration: none;
-}
-section{
-  min-width: 320px;
 }

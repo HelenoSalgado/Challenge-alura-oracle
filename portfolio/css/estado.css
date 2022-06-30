@@ -8,6 +8,9 @@
     transform: rotateZ(20deg) scale(1.2, 1.2);
     text-shadow: 5px 5px 12px hsl(0, 0%, 100%);
 }
+.banner img:hover{
+    box-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
 .card:hover{
     box-shadow: 2px 1px 5px #fff;
 }
@@ -28,7 +31,6 @@
     box-shadow: -9px 9px 18px #fff;
     animation: rastro 10ms ease;
 }
-
 @keyframes rastro {
     0%{
         transform: scale(1.1, 1.1);
