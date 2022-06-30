@@ -8,7 +8,10 @@ var desenho = document.querySelector('body');
 var enviar = document.querySelector('.pushable');
 var somMenuOn = document.querySelector('.som-menu-on');
 var somMenuOf = document.querySelector('.som-menu-of');
-var som = document.querySelector('.button-enviar');
+var somCertificados = document.querySelector('.som-certificados');
+var somProjetos = document.querySelector('.som-projetos');
+var somEnviar = document.querySelector('.button-enviar');
+
 
 hamburguer.addEventListener('click', () =>{
   var menuAtivo = document.querySelector('.container').classList.toggle('show-menu');
@@ -39,17 +42,18 @@ function sinalMouse(event){
   }, 500); 
 }
 
-var somProjetos = document.querySelector('.som-projetos');
-    
 cardProjetos.forEach( (card) => {
   card.addEventListener('mouseenter', () =>{
        img.forEach((img) => {
         img.addEventListener('mouseenter', () =>{
-         somProjetos.play();
-         img.classList.add("zoom");
-         setTimeout(() => {
-           img.style.display = "none";
-         }, 300); 
+         if (window.innerWidth < 660) {
+           somProjetos.play();
+         }
+         
+          img.classList.add("zoom");
+          setTimeout(() => {
+            img.style.display = "none";
+          }, 300); 
       })
     })
   })
@@ -77,6 +81,7 @@ var slideIndex = 1;
 slideDivs(slideIndex);
 
 function showDivs(n) {
+  somCertificados.play();
   slideDivs(slideIndex += n);
 }
 
@@ -99,7 +104,7 @@ function slideDivs(n){
 
 enviar.addEventListener("click", (event) => {
   event.preventDefault();
-  som.play();
+  somEnviar.play();
 })
 
 
