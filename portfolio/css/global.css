@@ -15,7 +15,7 @@
     --shadow-color: 210deg 22% 2%;
     /* Fontes */
    --font-primary: 'Baloo 2', 'cursive', sans-serif;
-   --font-secundary: 'Poppins', sans-serif;
+   --font-secundary: 'Fira Code', monospace;
    --font-action: Verdana, Geneva, Tahoma, sans-serif;
 }
 html{
