@@ -53,7 +53,7 @@ header::before{
     color: #fff;
     border: 1px solid transparent;
     border-radius: 5px;
-    z-index: 1;
+    z-index: 2;
 }
 .banner h1 {
     width: 100%;
@@ -688,15 +688,14 @@ footer .contato{
 .contato div{
     position: relative;
     margin-top: 50px;
-    width: 400px;
+    max-width: 400px;
     height: 400px;
     overflow: hidden;
     border-radius: 50%;
 }
 .contato div img{ 
     position: relative;
-    display: block;
-    margin: 0;
+    margin: 0px;
     width: 100%;
     height: 100%;
     filter: contrast(130%);
@@ -707,12 +706,13 @@ footer .contato{
 .contato div::before{
      content: "";
      width: 140px;
-     height: 140%;
+     height: 120%;
      position: absolute;
-     top: -19%;
+     top: -10%;
      left: 30%;
      transform: translate(-50%, -50%);
      background-color: var(--cor-destaque);
+     margin: 0;
      animation: rodar 5s linear infinite;
      z-index: 0;
 } 
@@ -880,4 +880,9 @@ footer textarea{
 }
 .fa-arrow-up{
     text-shadow: .1px .1px 1px #fff;
+}
+@media (max-width: 650px) {
+    .img-wrapper{
+       display: none;
+    }
 }
