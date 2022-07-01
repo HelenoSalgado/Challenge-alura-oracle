@@ -687,7 +687,6 @@ footer .contato{
 }
 .contato div{
     position: relative;
-    margin-top: 50px;
     max-width: 400px;
     height: 400px;
     overflow: hidden;
@@ -887,5 +886,10 @@ footer textarea{
     }
     .banner{
         backdrop-filter: none;
+    }
+    .contato div{
+        margin-top: 50px;
+        max-width: 300px;
+        height: 300px;
     }
 }
