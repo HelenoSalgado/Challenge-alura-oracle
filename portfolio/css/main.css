@@ -760,6 +760,10 @@ footer textarea{
     caret-color: var(--cor-destaque);
     padding: 5px;
 }
+.mensagem-erro{
+    padding: 5px 0;
+    color: #ff0000;
+}
 .copy{
     margin-top: 100px;
     width: 100%;

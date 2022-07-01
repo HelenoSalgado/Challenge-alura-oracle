@@ -125,9 +125,42 @@ function slideDivs(n){
 }
 
 enviar.addEventListener("click", (event) => {
+
   event.preventDefault();
   if (iVolume == 0) {
     somEnviar.play();
+  }
+  
+  var inputNome = document.querySelector(".input-nome").value;
+  var inputEmail = document.querySelector(".input-email").value;
+  var inputTexto = document.querySelector(".input-texto").value;
+  var error = document.querySelector(".mensagem-erro");
+
+  error.innerHTML = "";
+
+  var mensagem = [
+    'Por favor, preencha todos os campos.', 
+    'Por favor, digite um nome e um email',
+    'Por favor, digite um nome',
+    'Por favor, digite um email',
+    'Por favor, escreva uma mensage'
+  ]
+
+  if (inputNome == "" && inputEmail == "" && inputTexto == "") {
+    error.innerHTML += mensagem[0];
+    return
+  }else if(inputNome == "" && inputEmail == ""){
+    error.innerHTML += mensagem[1];
+    return
+  }else if(inputNome == "") {
+    error.innerHTML += mensagem[2];
+    return
+  }else if(inputEmail == ""){
+    error.innerHTML += mensagem[3];
+    return
+  }else if(inputTexto == ""){
+    error.innerHTML += mensagem[4];
+    return
   }
 })
 
