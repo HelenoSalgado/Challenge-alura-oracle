@@ -863,7 +863,7 @@ footer textarea{
     outline: none;
   }
 .link-topo{
-    position: fixed;
+    position: absolute;
     right: 10px;
     bottom: 20px;
     width: 40px;
@@ -884,5 +884,8 @@ footer textarea{
 @media (max-width: 650px) {
     .img-wrapper{
        display: none;
+    }
+    .banner{
+        backdrop-filter: none;
     }
 }
