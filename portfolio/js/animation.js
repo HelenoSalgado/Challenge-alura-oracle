@@ -12,6 +12,7 @@ var somCertificados = document.querySelector('.som-certificados');
 var somProjetos = document.querySelector('.som-projetos');
 var somEnviar = document.querySelector('.button-enviar');
 var volume = document.querySelector(".logo i");
+var somVolume = document.querySelector(".som-volume");
 var iVolume = 0;
 
 
@@ -54,6 +55,7 @@ volume.addEventListener("click", () =>{
     volume.classList.add("fa-volume-xmark");
     iVolume++;
   }else{
+    somVolume.play();
     volume.classList.remove("fa-volume-xmark");
     iVolume--;
   }
