@@ -6,6 +6,6 @@
 <br>
 <img src="img/captura-de-tela-de-2022-06.png">
 
-### 1. [Portfolio](https://helenosalgado.github.io/challenge-alura-oracle/portfolio/index.html).
+### 2. [Portfolio](https://helenosalgado.github.io/challenge-alura-oracle/portfolio/index.html).
 <br>
 <img src="img/print-portfolio-2022-07-01 09-56-19.png">
