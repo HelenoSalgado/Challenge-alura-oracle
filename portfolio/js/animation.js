@@ -143,7 +143,8 @@ enviar.addEventListener("click", (event) => {
     'Por favor, digite um nome e um email',
     'Por favor, digite um nome',
     'Por favor, digite um email',
-    'Por favor, escreva uma mensage'
+    'Por favor, escreva uma mensage',
+    'Obrigado, email enviado com Sucesso.'
   ]
 
   if (inputNome == "" && inputEmail == "" && inputTexto == "") {
@@ -161,6 +162,8 @@ enviar.addEventListener("click", (event) => {
   }else if(inputTexto == ""){
     error.innerHTML += mensagem[4];
     return
+  }else{
+    error.innerHTML += mensagem[5];
   }
 })
 
