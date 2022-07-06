@@ -9,3 +9,8 @@
 ### 2. [Portfolio](https://helenosalgado.github.io/challenge-alura-oracle/portfolio/index.html).
 <br>
 <img src="img/print-portfolio-2022-07-01 09-56-19.png">
+##
+📦 Nova funcionalidade
+🆙 Atualização
+💓 correção de bug
+🏁 release
