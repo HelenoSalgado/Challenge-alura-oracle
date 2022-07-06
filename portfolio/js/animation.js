@@ -165,13 +165,14 @@ enviar.addEventListener("click", (event) => {
     return
   }else{
     error.innerHTML += mensagem[5];
-  }
 
-  const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
+    const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
     method: "POST",
     body: new FormData( document.querySelector("form") )
-  });
-  postEmail;
+    });
+    postEmail;
+
+  }
 })
 
 
