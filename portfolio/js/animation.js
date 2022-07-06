@@ -126,10 +126,12 @@ function slideDivs(n){
 
 enviar.addEventListener("click", (event) => {
 
+  event.preventDefault();
+
   if (iVolume == 0) {
     somEnviar.play();
   }
-  
+  var form =  document.querySelector("form");
   var inputNome = document.querySelector(".input-nome").value;
   var inputEmail = document.querySelector(".input-email").value;
   var inputTexto = document.querySelector(".input-texto").value;
@@ -164,7 +166,12 @@ enviar.addEventListener("click", (event) => {
   }else{
     error.innerHTML += mensagem[5];
   }
-  event.preventDefault();
+
+  const enviar = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
+    method: "POST",
+    body: new FormData(form)
+  });
+  enviar;
 })
 
 
