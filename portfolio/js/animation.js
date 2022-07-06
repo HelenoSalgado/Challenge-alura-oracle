@@ -170,7 +170,13 @@ enviar.addEventListener("click", (event) => {
     method: "POST",
     body: new FormData( document.querySelector("form") )
     });
-    postEmail;
+
+    fetch(postEmail).then( response => {
+      return response.text(); // ou return response.json();
+    } )
+    .then ( result => {
+      alert( result );
+    });
 
   }
 })
