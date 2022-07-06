@@ -124,9 +124,9 @@ function slideDivs(n){
    }, 100); 
 }
 
-enviar.addEventListener("click", (event) => {
+enviar.addEventListener("click", () => {
 
-  event.preventDefault();
+  // event.preventDefault();
   if (iVolume == 0) {
     somEnviar.play();
   }
