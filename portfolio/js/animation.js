@@ -164,7 +164,6 @@ enviar.addEventListener("click", (event) => {
     error.innerHTML += mensagem[4];
     return
   }else{
-    error.innerHTML += mensagem[5];
 
     const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
     method: "POST",
@@ -175,7 +174,7 @@ enviar.addEventListener("click", (event) => {
       return response.text(); // ou return response.json();
     } )
     .then ( result => {
-      alert( result );
+      error.innerHTML += mensagem[5];
     });
 
   }
