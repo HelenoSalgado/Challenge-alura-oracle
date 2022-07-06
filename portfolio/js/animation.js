@@ -124,9 +124,8 @@ function slideDivs(n){
    }, 100); 
 }
 
-enviar.addEventListener("click", () => {
+enviar.addEventListener("click", (event) => {
 
-  // event.preventDefault();
   if (iVolume == 0) {
     somEnviar.play();
   }
@@ -165,6 +164,7 @@ enviar.addEventListener("click", () => {
   }else{
     error.innerHTML += mensagem[5];
   }
+  event.preventDefault();
 })
 
 
