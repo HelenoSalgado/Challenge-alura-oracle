@@ -131,7 +131,7 @@ enviar.addEventListener("click", (event) => {
   if (iVolume == 0) {
     somEnviar.play();
   }
-  var form =  document.querySelector("form");
+
   var inputNome = document.querySelector(".input-nome").value;
   var inputEmail = document.querySelector(".input-email").value;
   var inputTexto = document.querySelector(".input-texto").value;
@@ -167,11 +167,11 @@ enviar.addEventListener("click", (event) => {
     error.innerHTML += mensagem[5];
   }
 
-  const enviar = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
+  const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
     method: "POST",
-    body: new FormData(form)
+    body: new FormData( document.querySelector("form") )
   });
-  enviar;
+  postEmail;
 })
 
 
