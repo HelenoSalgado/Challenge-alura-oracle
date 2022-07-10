@@ -146,9 +146,9 @@ enviar.addEventListener("click", (event) => {
   var inputNome = document.querySelector(".input-nome").value;
   var inputEmail = document.querySelector(".input-email").value;
   var inputTexto = document.querySelector(".input-texto").value;
-  var error = document.querySelector(".mensagem-erro");
+  var alert = document.querySelector(".mensagem-alerta");
 
-  error.innerHTML = "";
+  alert.innerHTML = "";
 
   var mensagem = [
     'Por favor, preencha todos os campos.', 
@@ -160,19 +160,19 @@ enviar.addEventListener("click", (event) => {
   ]
 
   if (inputNome == "" && inputEmail == "" && inputTexto == "") {
-    error.innerHTML += mensagem[0];
+    alert.innerHTML += mensagem[0];
     return
   }else if(inputNome == "" && inputEmail == ""){
-    error.innerHTML += mensagem[1];
+    alert.innerHTML += mensagem[1];
     return
   }else if(inputNome == "") {
-    error.innerHTML += mensagem[2];
+    alert.innerHTML += mensagem[2];
     return
   }else if(inputEmail == ""){
-    error.innerHTML += mensagem[3];
+    alert.innerHTML += mensagem[3];
     return
   }else if(inputTexto == ""){
-    error.innerHTML += mensagem[4];
+    alert.innerHTML += mensagem[4];
     return
   }else{
 
@@ -182,10 +182,13 @@ enviar.addEventListener("click", (event) => {
     });
 
     fetch(postEmail).then( response => {
-      return response.text(); // ou return response.json();
+      return response.text();
     } )
     .then ( result => {
-      error.innerHTML += mensagem[5];
+      alert.innerHTML += mensagem[5];
+      alert.classList.add("mensagem-sucesso");
+      var form = document.querySelector("form");
+      form.reset();
     });
 
   }
