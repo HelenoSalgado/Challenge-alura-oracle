@@ -150,13 +150,19 @@ enviar.addEventListener("click", (event) => {
 
   alert.innerHTML = "";
 
+  var verificaEmail = {
+     arroba: inputEmail.indexOf("@") > -1,
+     ponto: inputEmail.indexOf(".") > -1
+  }
+
   var mensagem = [
     'Por favor, preencha todos os campos.', 
     'Por favor, digite um nome e um email',
     'Por favor, digite um nome',
     'Por favor, digite um email',
-    'Por favor, escreva uma mensage',
-    'Obrigado, email enviado com Sucesso.'
+    'Por favor, escreva uma mensagem',
+    'Obrigado, email enviado com Sucesso.',
+    'Ops... Parece que seu e-mail está incompleto'
   ]
 
   if (inputNome == "" && inputEmail == "" && inputTexto == "") {
@@ -174,23 +180,25 @@ enviar.addEventListener("click", (event) => {
   }else if(inputTexto == ""){
     alert.innerHTML += mensagem[4];
     return
+  }else if(verificaEmail.arroba == true 
+        && verificaEmail.ponto == true){
+
+        const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
+          method: "POST",
+          body: new FormData( document.querySelector("form") )
+        });
+
+       fetch(postEmail).then( response => {
+          return response.text();
+       })
+       .then ( result => {
+          alert.innerHTML += mensagem[5];
+          alert.classList.add("mensagem-sucesso");
+          var form = document.querySelector("form");
+          form.reset();
+       });
   }else{
-
-    const postEmail = new Request("https://formsubmit.co/helenosalgado19@gmail.com", {
-    method: "POST",
-    body: new FormData( document.querySelector("form") )
-    });
-
-    fetch(postEmail).then( response => {
-      return response.text();
-    } )
-    .then ( result => {
-      alert.innerHTML += mensagem[5];
-      alert.classList.add("mensagem-sucesso");
-      var form = document.querySelector("form");
-      form.reset();
-    });
-
+    alert.innerHTML += mensagem[6];
   }
 })
 
